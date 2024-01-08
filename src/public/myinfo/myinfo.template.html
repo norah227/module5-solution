@@ -1,0 +1,24 @@
+<div class="container">
+    <div style="">
+      <div style="">
+        <h1 style="">MY INFO</h1>
+        <div ng-if="$ctrl.userInfo" style="">
+          <div style="">
+          <img class="img-responsive" width="250" height="150" ng-src="images/menu/{{$ctrl.categoryCode}}/{{$ctrl.favoriteDishItem.short_name}}.jpg" alt="{{$ctrl.favoriteDishItem.name}}">
+          </div>
+          <br>
+          <p>First Name: {{ $ctrl.userInfo.firstname }}</p>
+          <p>Last Name: {{ $ctrl.userInfo.lastname }}</p>
+          <p>Email: {{ $ctrl.userInfo.email }}</p>
+          <p>Contact Number:</> {{ $ctrl.userInfo.contact }}</p>
+          <p ng-if="$ctrl.favoriteDishItem">Favorite Dish: {{ $ctrl.favoriteDishItem.name }}</p>
+          <p ng-if="$ctrl.favoriteDishItem">Description: {{ $ctrl.favoriteDishItem.description }}</p>
+          
+        </div>
+        <div ng-if="!$ctrl.userInfo" style="">
+          Not Signed Up Yet. <a ui-sref="signup">Sign up Now!</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
